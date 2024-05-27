@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "333745961734",
+    "project_id": "serpomar-client",
+    "storage_bucket": "serpomar-client.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333745961734:android:6cbb5a88fdc63d8ba77c87",
+        "android_client_info": {
+          "package_name": "com.juan.serpomar.serpomar_client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8UZyTgUUvSiJLyynXwCrT7tBYfd9XLIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
