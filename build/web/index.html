@@ -14,25 +14,25 @@
   <link rel="manifest" href="manifest.json">
 
   <script>
-    const serviceWorkerVersion = "1998699882";
+    const serviceWorkerVersion = "565166082";
   </script>
   <script src="flutter.js" defer></script>
-  <script src="https://unpkg.com/webview_flutter_web/webview_flutter_web.dart.js"></script>
+  <script src="web/webview_flutter_web.dart.js" defer></script>
 </head>
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
+<script>
+  window.addEventListener('load', function(ev) {
+    _flutter.loader.loadEntrypoint({
+      serviceWorker: {
+        serviceWorkerVersion: serviceWorkerVersion,
+      },
+      onEntrypointLoaded: function(engineInitializer) {
+        engineInitializer.initializeEngine().then(function(appRunner) {
+          appRunner.runApp();
+        });
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
