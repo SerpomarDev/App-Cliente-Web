@@ -119,6 +119,7 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       margin: EdgeInsets.only(top: 20),
       child: TextField(
+        key: Key('email'), // Agregar key
         controller: con.emailController,
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
@@ -133,6 +134,7 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       margin: EdgeInsets.only(top: 20),
       child: TextField(
+        key: Key('password'), // Agregar key
         controller: con.passwordController,
         keyboardType: TextInputType.text,
         obscureText: true,
