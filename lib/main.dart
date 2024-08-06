@@ -34,6 +34,7 @@ import 'package:serpomar_client/src/pages/home/home_page.dart';
 import 'package:serpomar_client/src/pages/login/login_page.dart';
 import 'package:serpomar_client/src/pages/looker/looker_page.dart';
 import 'package:serpomar_client/src/pages/looker/lookers/looker1/looker1_page.dart';
+import 'package:serpomar_client/src/pages/looker/lookers/looker4/looker4_page.dart';
 import 'package:serpomar_client/src/pages/register/register_page.dart';
 import 'package:serpomar_client/src/pages/roles/roles_page.dart';
 import 'package:serpomar_client/src/utils/firebase_config.dart';
@@ -95,6 +96,7 @@ class _MyAppState extends State<MyApp> {
         GetPage(name: '/looker/lookers/looker1', page: () => Looker1Page()),
         GetPage(name: '/looker/lookers/looker2', page: () => Looker2Page()),
         GetPage(name: '/looker/lookers/looker3', page: () => Looker3Page()),
+        GetPage(name: '/looker/lookers/looker3', page: () => Looker4Page()),
         GetPage(name: '/administrador/products/modalidades/', page: () => ModalidadesPage()),
         GetPage(name: '/administrador/products/modalidades/expo', page: () => ModalidadExpoPage()),
         GetPage(name: '/administrador/products/modalidades/impo', page: () => ModalidadImpoPage()),
