@@ -10,6 +10,8 @@ import 'package:serpomar_client/src/pages/looker/lookers/looker2/looker2_page.da
 import 'package:serpomar_client/src/pages/looker/lookers/looker3/looker3_page.dart';
 import 'package:serpomar_client/src/utils/AppDrawer.dart';
 
+import '../looker/lookers/looker4/looker4_page.dart';
+
 class HomePage extends StatelessWidget {
   final HomeController con = Get.put(HomeController());
 
@@ -88,6 +90,12 @@ class HomePage extends StatelessWidget {
                     title: "LLENOS",
                     onTap: () => Get.to(() => Looker3Page()),
                     imagePath: "assets/img/llenos.png",
+                  ),
+                  _buildGridTile(
+                    context,
+                    title: "IMPORTACIÓN",
+                    onTap: () => Get.to(() => Looker4Page()),
+                    imagePath: "assets/img/importacion.png",
                   ),
                   // _buildGridTile(
                   //   context,
