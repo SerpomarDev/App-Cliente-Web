@@ -136,9 +136,12 @@ class UsersProvider {
     return response.data.stream.transform(utf8.decoder);
   }
 
-  Future<ResponseApi> login(String email, String password) async {
-    var dioClient = Dio();
-    Response response = await dioClient.post(
+ Future<ResponseApi> login(String email, String password) async {
+  var dioClient = Dio();
+  Response response;
+
+  try {
+    response = await dioClient.post(
       '$url/login',
       data: {
         'email': email,
@@ -150,18 +153,25 @@ class UsersProvider {
         },
       ),
     );
-
-    if (response.data == null) {
-      print('Error: No se pudo ejecutar la petición');
-      return ResponseApi();
-    }
-
-    if (response.statusCode == 401) {
-      print('Error: Credenciales incorrectas');
-      return ResponseApi(success: false, message: 'Credenciales incorrectas');
-    }
-
-    ResponseApi responseApi = ResponseApi.fromJson(response.data);
-    return responseApi;
+  } catch (e) {
+    // Manejar errores de red o de conexión
+    print('Error: No se pudo ejecutar la petición: $e');
+    return ResponseApi(); 
   }
+
+  if (response.statusCode == 401) {
+    print('Error: Credenciales incorrectas');
+    return ResponseApi(success: false, message: 'Credenciales incorrectas');
+  }
+
+  if (response.data == null) {
+    // Manejar respuesta inesperada del servidor
+    print('Error: La respuesta del servidor es nula');
+    return ResponseApi(); 
+  }
+
+  ResponseApi responseApi = ResponseApi.fromJson(response.data);
+  return responseApi;
+}
+
 }

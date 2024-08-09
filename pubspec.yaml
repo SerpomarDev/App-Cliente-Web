@@ -58,7 +58,7 @@ dependencies:
   pie_chart: ^5.4.0
   flutter_animated_dialog: ^2.0.1
   url_launcher: ^6.2.6
-  syncfusion_flutter_charts: ^25.2.4
+  syncfusion_flutter_charts: ^20.0.0
 
 dev_dependencies:
   flutter_test:
